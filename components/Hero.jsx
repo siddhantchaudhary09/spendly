@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
-import banner from "../assets/homebanner.jpeg";
+import banner from "../assets/hero-image.jpg";
 import { Button } from "./ui/button";
 
 const HeroSection = () => {
