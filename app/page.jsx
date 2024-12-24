@@ -107,7 +107,7 @@ export default function Home() {
             Join thousands of users who are already managing their expenses
             smarter with Spendly.
           </p>
-          <Link href={"/dashboard"}>
+          <Link href="/dashboard">
             <Button
               size="lg"
               className="bg-white text-blue-600 hover:bg-blue-50 animate-bounce"

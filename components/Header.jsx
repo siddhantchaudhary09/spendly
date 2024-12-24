@@ -1,14 +1,16 @@
+import { checkUser } from "@/lib/checkUser";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { LayoutDashboard, PenBox } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 
-const Header = () => {
+const Header = async () => {
+  await checkUser();
   return (
     <div className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b ">
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/">
-          <h1 className=" font-bold text-xl   ">Spendly</h1>
+          <h1 className="  text-4xl gradient-title">Spendly</h1>
         </Link>
 
         <div className=" flex items-center space-x-4">
@@ -23,7 +25,7 @@ const Header = () => {
               </Button>
             </Link>
 
-            <Link href={"/transacion/create"}>
+            <Link href={"/transaction/create"}>
               <Button className=" flex items-center gap-2">
                 <PenBox size={18} />
                 <span className="hidden md:inline">Add Transaction</span>
