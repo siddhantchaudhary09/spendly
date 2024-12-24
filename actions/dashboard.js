@@ -80,7 +80,7 @@ export async function createAccount(data) {
     // If it's the first account, make it default regardless of user input
     // If not, use the user's preference
     const shouldBeDefault = true;
-    // existingAccounts.length === 0 ? true : data.isDefault;
+    existingAccounts.length === 0 ? true : data.isDefault;
 
     // If this account should be default, unset other default accounts
     if (shouldBeDefault) {
